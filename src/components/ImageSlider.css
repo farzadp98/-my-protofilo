@@ -1,0 +1,78 @@
+/* src/components/ImageSlider.css */
+
+/* Custom styles for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; /* Force white color */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  border-radius: 9999px; /* Full circle */
+  width: 48px; /* Larger hit area */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0.7; /* Slightly transparent when not hovered */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important; /* Adjust icon size */
+}
+
+/* Position adjustments for navigation buttons */
+.swiper-button-prev {
+  left: 20px; /* More padding from the edge */
+}
+
+.swiper-button-next {
+  right: 20px; /* More padding from the edge */
+}
+
+/* Custom styles for Swiper pagination dots */
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  opacity: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 12px; /* Larger dots */
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff; /* Solid white for active dot */
+  transform: scale(1.2); /* Slightly larger active dot */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 16px !important;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+} 
